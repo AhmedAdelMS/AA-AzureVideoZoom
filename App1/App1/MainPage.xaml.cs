@@ -26,5 +26,13 @@ namespace App1
         {
             this.InitializeComponent();
         }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            // move the file to Azure Media Services
+            aaaz (TBXurl.Text);
+        }
+
+        
     }
 }
