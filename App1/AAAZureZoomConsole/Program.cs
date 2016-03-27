@@ -14,16 +14,21 @@ namespace AAAZureZoomConsole
         {
             Console.WriteLine("Pls enter the URL of the video/audio file: ");
             string fileURL = Console.ReadLine();
-            CreateAssetAndUploadSingleFile(AssetCreationOptions.None,)
+            CreateAssetAndUploadSingleFile(AssetCreationOptions.None, "c:\\temp\\abiola.wmv");
+            Console.WriteLine("Done! ;-) ");
+            Console.ReadLine();
+
         }
 
         static public IAsset CreateAssetAndUploadSingleFile(AssetCreationOptions assetCreationOptions, string singleFilePath)
         {
+            /*
             if (!File.Exists(singleFilePath))
             {
                 Console.WriteLine("File does not exist.");
                 return null;
             }
+            */
             var _context = new CloudMediaContext("aamediaservice1", "uIux27Hig96nRLkGZEZcareBz0x5t2gPPA533riDgTo=");
             var assetName = Path.GetFileNameWithoutExtension(singleFilePath);
             IAsset inputAsset = _context.Assets.Create(assetName, assetCreationOptions);
@@ -51,4 +56,4 @@ namespace AAAZureZoomConsole
         }
     }
 }
-}
+
