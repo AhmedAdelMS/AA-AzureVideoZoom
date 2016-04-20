@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HMLS.Web", "HMLS.Web\HMLS.Web.csproj", "{CF299E43-488E-400B-8E5D-2745666FB928}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HLMS.HL", "HLMS.HL\HLMS.HL.csproj", "{C1AE9BDE-C308-4EEE-A168-C95368499053}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HLMS.CCExtractor", "HLMS.CCExtractor\HLMS.CCExtractor.csproj", "{184CD54A-B390-495D-B758-44A2D20D75F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HLMS.Search", "HLMS.Search\HLMS.Search.csproj", "{3DD20917-C0D1-4CE8-92EA-A43C10C4BCFE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF299E43-488E-400B-8E5D-2745666FB928}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF299E43-488E-400B-8E5D-2745666FB928}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF299E43-488E-400B-8E5D-2745666FB928}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF299E43-488E-400B-8E5D-2745666FB928}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1AE9BDE-C308-4EEE-A168-C95368499053}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1AE9BDE-C308-4EEE-A168-C95368499053}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1AE9BDE-C308-4EEE-A168-C95368499053}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1AE9BDE-C308-4EEE-A168-C95368499053}.Release|Any CPU.Build.0 = Release|Any CPU
+		{184CD54A-B390-495D-B758-44A2D20D75F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{184CD54A-B390-495D-B758-44A2D20D75F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{184CD54A-B390-495D-B758-44A2D20D75F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{184CD54A-B390-495D-B758-44A2D20D75F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DD20917-C0D1-4CE8-92EA-A43C10C4BCFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DD20917-C0D1-4CE8-92EA-A43C10C4BCFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DD20917-C0D1-4CE8-92EA-A43C10C4BCFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DD20917-C0D1-4CE8-92EA-A43C10C4BCFE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\TransientFaultHandling.Core.5.1.1209.1\lib\NET4
+	EndGlobalSection
+EndGlobal
