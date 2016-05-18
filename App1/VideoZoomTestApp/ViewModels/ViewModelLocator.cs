@@ -10,6 +10,15 @@ namespace VideoZoomTestApp.ViewModels
     {
         public ViewModelLocator()
         {
+            Main = new MainViewModel();
+        }
+
+        private MainViewModel main;
+
+        public MainViewModel Main
+        {
+            get { return main; }
+            set { main = value; }
         }
     }
 }

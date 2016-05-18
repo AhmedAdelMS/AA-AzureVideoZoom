@@ -5,6 +5,8 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.Storage;
+using Windows.Storage.AccessCache;
 
 namespace VideoZoomTestApp.Helpers
 {
@@ -17,21 +19,21 @@ namespace VideoZoomTestApp.Helpers
 
     public class FileUploadHelper
     {
-        public void UploadFile(List<string> files, string uploaduri)
+        public static async Task UploadFile(List<StorageFile> files, string uploaduri)
         {
             var httpClient = new HttpClient();
             // Read the files
-            foreach (String file in files)
+            foreach (StorageFile file in files)
             {
-                var fileStream = File.Open(file, FileMode.Open);
-                var fileInfo = new FileInfo(file);
+                var fileStream = await file.OpenStreamForReadAsync();
+
                 FileUploadResult uploadResult = null;
                 bool _fileUploaded = false;
 
                 var content = new MultipartFormDataContent();
                 using (var streamcontent = new StreamContent(fileStream))
                 {
-                    content.Add(streamcontent, "\"file\"", string.Format("\"{0}\"", fileInfo.Name));
+                    content.Add(streamcontent, "\"file\"", string.Format("\"{0}\"", file.Name));
 
                     var taskUpload = httpClient.PostAsync(uploaduri, content).ContinueWith(task =>
                     {
@@ -54,8 +56,6 @@ namespace VideoZoomTestApp.Helpers
                             {
                             }
                         }
-
-                        fileStream.Dispose();
                     });
 
                     taskUpload.Wait();
