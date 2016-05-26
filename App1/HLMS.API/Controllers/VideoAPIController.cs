@@ -17,7 +17,7 @@ namespace HLMS.API.Controllers
         [MimeMultipart]
         public string Get()
         {
-            return "Hello";
+            return "";
         }
 
         [MimeMultipart]
@@ -29,6 +29,7 @@ namespace HLMS.API.Controllers
         [MimeMultipart]
         public async void Post()
         {
+            // Get query from form
             // Read the MIME multipart asynchronously
             var stream = await Request.Content.ReadAsMultipartAsync();
             //Request.GetUrlHelper()
